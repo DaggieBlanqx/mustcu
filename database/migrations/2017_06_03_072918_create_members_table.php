@@ -18,9 +18,9 @@ class CreateMembersTable extends Migration
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('course_reg_no');
-            $table->integer('init_year_sem_id')->unsiged();
-	        $table->integer('prev_year_sem_id')->unsiged()->nullable();
-            $table->integer('curr_year_sem_id')->unsiged();
+            $table->integer('init_yearsem')->unsiged();
+	        $table->integer('prev_yearsem')->unsiged()->nullable();
+            $table->integer('curr_yearsem')->unsiged();
             $table->softDeletes();
             $table->timestamps();
 	        /*

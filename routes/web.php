@@ -21,7 +21,7 @@ Route::group(['namespace' => 'Access','as' => 'access.'], function(){
  * Frontend Routes
  * Namespaces indicate folder structure
  */
-Route::group(['namespace' => 'Frontend', 'as' => 'frontend.', 'middleware' => 'auth_station_user'], function () {
+Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     includeRouteFiles(__DIR__.'/Frontend/');
 });
 

@@ -38,19 +38,6 @@
                     </div><!--col-lg-10-->
                 </div><!--form control-->
 
-	            @if($user->user_type == config('access.user_types.station_employee'))
-	            <div class="form-group">
-		            {{ Form::label('station_id', 'Change Station', ['class' => 'col-lg-2 control-label']) }}
-		            <div class="col-lg-10">
-			            <select v-model="employee_station" name="station_id" class="form-control">
-				            @foreach($stations as $station)
-				            <option value="{{$station->id}}" v-model="employee_station">{{$station->station_name}}</option>
-				            @endforeach
-			            </select>
-		            </div><!--col-lg-10-->
-	            </div><!--form control-->
-	            @endif
-
                 @if ($user->id != 1)
 
                     <div class="form-group">

@@ -35,11 +35,10 @@ class UserController extends Controller
      * @param RoleRepository $roles
      * @param StationRepository $stations
      */
-    public function __construct(UserRepository $users, RoleRepository $roles, StationRepository $stations)
+    public function __construct(UserRepository $users, RoleRepository $roles)
     {
         $this->users = $users;
         $this->roles = $roles;
-        $this->stations = $stations;
     }
 
     /**
@@ -60,7 +59,6 @@ class UserController extends Controller
     public function create(ManageUserRequest $request)
     {
         return view('backend.access.create')
-            ->withStations($this->stations->getAll())
             ->withRoles($this->roles->getAll());
     }
 
@@ -98,7 +96,6 @@ class UserController extends Controller
     {
         return view('backend.access.edit')
             ->withUser($user)
-	        ->withStations($this->stations->getAll())
 	        ->withUserRoles($user->roles->pluck('id')->all())
             ->withRoles($this->roles->getAll());
     }

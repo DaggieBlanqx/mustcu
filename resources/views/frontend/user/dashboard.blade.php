@@ -12,12 +12,6 @@
 
                     <div class="row">
                         <div class="col-md-4">
-                            <p>You are logged in to <strong>{{station()->station_name}}</strong><br />
-                                <small>
-                                    Created: <em>{{station()->created_at->format('M d Y')}}</em><br />
-                                    Manager: <em>{{station()->manager->person_name}}</em>
-                                </small>
-                            </p>
 
                         </div>
                         <div class="col-md-4">

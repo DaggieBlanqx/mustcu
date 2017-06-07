@@ -14,9 +14,9 @@ class SetupMembersTables extends Migration
     public function up()
     {
         Schema::table('members', function (Blueprint $table) {
-            $table->foreign('init_yearsem')->references('id')->on('year_sems')->onDelete('cascade');
-            $table->foreign('prev_yearsem')->references('id')->on('year_sems')->onDelete('cascade');
-            $table->foreign('curr_yearsem')->references('id')->on('year_sems')->onDelete('cascade');
+            //$table->foreign('init_yearsem')->references('id')->on('year_sems')->onDelete('cascade');
+            //$table->foreign('prev_yearsem')->references('id')->on('year_sems')->onDelete('cascade');
+            //$table->foreign('curr_yearsem')->references('id')->on('year_sems')->onDelete('cascade');
         });
     }
 

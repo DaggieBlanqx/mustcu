@@ -66,18 +66,6 @@
                     </div><!--col-lg-10-->
                 </div><!--form control-->
 
-                <div v-if="user_type=={{config('access.user_types.station_employee')}}" class="form-group">
-                    {{ Form::label('station_id', 'Assign Station', ['class' => 'col-lg-2 control-label']) }}
-                    <div class="col-lg-10">
-                        <select name="station_id" class="form-control">
-	                        <option disabled selected>Choose Station for this employee</option>
-                           @foreach($stations as $station)
-                            <option value="{{$station->id}}" v-model="employee_station">{{$station->station_name}}</option>
-                            @endforeach
-                        </select>
-                    </div><!--col-lg-10-->
-                </div><!--form control-->
-
                 <div class="form-group">
                     {{ Form::label('status', trans('validation.attributes.backend.access.users.active'), ['class' => 'col-lg-2 control-label']) }}
 
